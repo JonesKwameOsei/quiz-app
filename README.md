@@ -84,6 +84,13 @@ quiz-app/
 
 ---
 
+## 🌐 App Live Demo
+
+The Application is live at:
+[https://quiz-app-ten.vercel.app/](https://quiz-app-gamma-one-54.vercel.app/)
+
+---
+
 ## 🏗️ Architecture Overview
 
 ### 🧩 Core Classes
