@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Application</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Quiz Application</h1>
+      <div class="theme-toggle">
+        <button id="theme-toggle-btn">
+          <i class="fas fa-sun" id="theme-icon"></i>
+        </button>
+        <span id="theme-text"></span>
+      </div>
+    </header>
+
+    <div class="quiz-info">
+      <div class="timer">
+        <span id="minutes">10</span>:<span id="seconds">00</span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <div class="progress-text">0/20</div>
+      </div>
+    </div>
+
+    <div id="quiz-container">
+      <!-- Start Screen -->
+      <div id="start-screen" class="quiz-screen active">
+        <h2>Welcome to the Quiz!</h2>
+        <p>You have 10 minutes to answer 20 questions.</p>
+        <p>Answer each question to proceed to the next one.</p>
+        <button id="start-btn" class="btn">Start Quiz</button>
+      </div>
+
+      <!-- Questions Screen -->
+      <div id="questions-screen" class="quiz-screen">
+        <div class="question-container">
+          <h2 id="question-text">Question text will appear here</h2>
+          <div id="options-container">
+            <!-- Options will be inserted here -->
+          </div>
+          <button id="submit-btn" class="btn" disabled>Submit Answer</button>
+        </div>
+      </div>
+
+      <!-- Results Screen -->
+      <div id="results-screen" class="quiz-screen">
+        <h2>Quiz Complete!</h2>
+        <div id="loading-container" class="hidden">
+          <div class="loader"></div>
+          <p>Calculating your score...</p>
+        </div>
+        <div id="score-container" class="hidden">
+          <h3>Your Score: <span id="score-value">0</span>/20</h3>
+          <p id="score-feedback">Feedback will appear here</p>
+          <button id="restart-btn" class="btn">Restart Quiz</button>
+        </div>
+      </div>
+
+      <!-- Timeout Screen -->
+      <div id="timeout-screen" class="quiz-screen">
+        <h2>Time's Up!</h2>
+        <p>Your quiz has timed out.</p>
+        <h3>Your Score: <span id="timeout-score-value">0</span>/20</h3>
+        <p id="timeout-score-feedback">Feedback will appear here</p>
+        <button id="timeout-restart-btn" class="btn">Restart Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
